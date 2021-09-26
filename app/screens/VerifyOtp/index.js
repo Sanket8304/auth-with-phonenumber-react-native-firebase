@@ -1,5 +1,5 @@
 //library imports
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import {
   View,
   SafeAreaView,
@@ -15,7 +15,7 @@ import styles from './verifyOtpStyle';
 import BaseStyle from '../../styles/BaseStyle';
 import Spinner from '../../component/Spinner';
 import Header from '../../component/Header';
-
+//#6A6969
 const VerifyOtp = props => {
   const {navigation} = props;
   const {phoneNumber, confirmation} = props.route.params;
@@ -27,7 +27,9 @@ const VerifyOtp = props => {
     console.log('clicked....');
     try {
       let res = await confirmation.confirm(code);
-      console.log('res ->', res);
+      if (res?.user) {
+        props.navigation.navigate('Home');
+      }
     } catch (error) {
       console.log('error ->', error);
       alert('Invalid code.');

@@ -9,6 +9,10 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import Login from '../screens/Login';
 import VerifyOtp from '../screens/VerifyOtp';
 import Home from '../screens/Home';
+import MyTrip from '../screens/MyTrip';
+import Offers from '../screens/Offers';
+import TripIdea from '../screens/TripIdea';
+import TripMony from '../screens/TripMony';
 import images from '../constants/images';
 import styles from './appNavigationStyle';
 
@@ -25,20 +29,51 @@ const NavigationStack = () => {
           options={{
             tabBarLabel: '',
             tabBarIcon: ({focused}) => {
-              return (
-                <View style={{alignItems: 'center'}}>
-                  <Image
-                    source={images.home}
-                    style={styles.icon}
-                    resizeMode="contain"
-                  />
-                  <View style={styles.activeDot} />
-                </View>
-              );
+              if (focused) {
+                return (
+                  <View style={{alignItems: 'center'}}>
+                    <Image
+                      source={images.home}
+                      style={styles.icon}
+                      resizeMode="contain"
+                    />
+                    <View style={styles.activeDot} />
+                  </View>
+                );
+              }
             },
           }}
         />
-        {/* <Tab.Screen
+        <Tab.Screen
+          name="MyTrip"
+          component={MyTrip}
+          options={{
+            tabBarLabel: '',
+            tabBarIcon: ({focused}) => {
+              if (focused) {
+                return (
+                  <View style={{alignItems: 'center'}}>
+                    <Image
+                      source={images.suitcase}
+                      style={styles.icon}
+                      resizeMode="contain"
+                    />
+                    <View style={styles.activeDot} />
+                  </View>
+                );
+              } else {
+                return (
+                  <Image
+                    source={images.suitcase}
+                    style={styles.icon}
+                    resizeMode="contain"
+                  />
+                );
+              }
+            },
+          }}
+        />
+        <Tab.Screen
           name="Offers"
           component={Offers}
           options={{
@@ -48,7 +83,7 @@ const NavigationStack = () => {
                 return (
                   <View style={{alignItems: 'center'}}>
                     <Image
-                      source={images.footerIcons.offer_enabled}
+                      source={images.discount}
                       style={styles.icon}
                       resizeMode="contain"
                     />
@@ -58,32 +93,18 @@ const NavigationStack = () => {
               } else {
                 return (
                   <Image
-                    source={images.footerIcons.offer_disabled}
+                    source={images.discount}
                     style={styles.icon}
                     resizeMode="contain"
                   />
                 );
               }
             },
-          }}
-        />
-        <Tab.Screen
-          name="Search"
-          component={Search}
-          options={{
-            tabBarLabel: '',
-            tabBarIcon: () => (
-              <Image
-                source={images.footerIcons.icon}
-                style={{width: 64, height: 64}}
-                resizeMode="contain"
-              />
-            ),
           }}
         />
         <Tab.Screen
           name="Favourites"
-          component={Favourites}
+          component={TripIdea}
           options={{
             tabBarLabel: '',
             tabBarIcon: ({focused}) => {
@@ -91,7 +112,7 @@ const NavigationStack = () => {
                 return (
                   <View style={{alignItems: 'center'}}>
                     <Image
-                      source={images.footerIcons.favourite_enabled}
+                      source={images.lamp}
                       style={styles.icon}
                       resizeMode="contain"
                     />
@@ -101,7 +122,7 @@ const NavigationStack = () => {
               } else {
                 return (
                   <Image
-                    source={images.footerIcons.favourite_disabled}
+                    source={images.lamp}
                     style={styles.icon}
                     resizeMode="contain"
                   />
@@ -111,8 +132,8 @@ const NavigationStack = () => {
           }}
         />
         <Tab.Screen
-          name="Profile"
-          component={Profile}
+          name="TripMony"
+          component={TripMony}
           options={{
             tabBarLabel: '',
             tabBarIcon: ({focused}) => {
@@ -120,7 +141,7 @@ const NavigationStack = () => {
                 return (
                   <View style={{alignItems: 'center'}}>
                     <Image
-                      source={images.footerIcons.profile_enabled}
+                      source={images.snowed_mountains}
                       style={styles.icon}
                       resizeMode="contain"
                     />
@@ -130,7 +151,7 @@ const NavigationStack = () => {
               } else {
                 return (
                   <Image
-                    source={images.footerIcons.profile_disabled}
+                    source={imagesimages.snowed_mountains}
                     style={styles.icon}
                     resizeMode="contain"
                   />
@@ -138,7 +159,7 @@ const NavigationStack = () => {
               }
             },
           }}
-        /> */}
+        />
       </Tab.Navigator>
     );
   };
