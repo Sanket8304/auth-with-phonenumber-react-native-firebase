@@ -45,15 +45,17 @@ const Login = props => {
 
   const handleSubmit = async () => {
     const number = '+' + callingCode + ' ' + phoneNumber;
-    console.log('number ->', number);
-    const confirmation = await auth().signInWithPhoneNumber(number);
-    console.log('confirmation ->', JSON.stringify(confirmation));
-    // if (confirmation) {
-    //   props.navigation.navigate('VerifyOtp', {
-    //     phoneNumber: callingCode + ' ' + phoneNumber,
-    //     confirmation: confirmation,
-    //   });
-    // }
+    try {
+      const confirmation = await auth().signInWithPhoneNumber(number);
+      if (confirmation) {
+        props.navigation.navigate('VerifyOtp', {
+          phoneNumber: callingCode + ' ' + phoneNumber,
+          confirmation: confirmation,
+        });
+      }
+    } catch (error) {
+      alert(error);
+    }
   };
 
   return loading ? (

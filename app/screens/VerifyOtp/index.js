@@ -26,9 +26,11 @@ const VerifyOtp = props => {
   const handleVerify = async () => {
     console.log('clicked....');
     try {
-      confirmation.confirm(code);
+      let res = await confirmation.confirm(code);
+      console.log('res ->', res);
     } catch (error) {
-      console.log('Invalid code.');
+      console.log('error ->', error);
+      alert('Invalid code.');
     }
   };
 
