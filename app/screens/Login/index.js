@@ -24,8 +24,6 @@ const Login = props => {
   const [phoneNumber, setPhoneNumber] = useState(undefined);
   const [countryCode, setCountryCode] = useState('IN');
   const [callingCode, setCallingCode] = useState('91');
-  const [openModal, setOpenModal] = useState(false);
-  const [showCountryModal, setShowCountryModal] = useState(false);
 
   const withFilter = true;
   const withFlag = false;

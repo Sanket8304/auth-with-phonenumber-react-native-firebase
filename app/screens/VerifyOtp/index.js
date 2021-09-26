@@ -11,6 +11,7 @@ import {
 import OTPInputView from '@twotalltotems/react-native-otp-input';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
+import auth from '@react-native-firebase/auth';
 
 //component imports
 import styles from './verifyOtpStyle';
@@ -25,11 +26,28 @@ const VerifyOtp = props => {
 
   const [loading, setLoading] = useState(false);
   const [code, setCode] = useState(undefined);
+  const [confirm, setConfirm] = useState(confirmation);
+
+  const handleResendOTP = async () => {
+    setLoading(true);
+    const number = '+' + phoneNumber.replace(' ', '');
+    console.log('number ->', number);
+    try {
+      const res = await auth().signInWithPhoneNumber(number);
+      if (res) {
+        setConfirm(res);
+        setLoading(false);
+      }
+    } catch (error) {
+      setLoading(false);
+      alert(error);
+    }
+  };
 
   const handleVerify = async () => {
     setLoading(true);
     try {
-      let res = await confirmation.confirm(code);
+      let res = await confirm.confirm(code);
       if (res?.user) {
         props.setAuth(res?.user);
         setLoading(false);
@@ -84,7 +102,7 @@ const VerifyOtp = props => {
               </View>
 
               <Text
-                // onPress={() => handleResendOTP()}
+                onPress={() => handleResendOTP()}
                 type="headerText"
                 style={styles.resendOtptext}>
                 Resend OTP
