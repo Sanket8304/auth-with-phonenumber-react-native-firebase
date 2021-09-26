@@ -18,14 +18,19 @@ import Header from '../../component/Header';
 
 const VerifyOtp = props => {
   const {navigation} = props;
-  //   const {phoneNumber} = props.route.params;
+  const {phoneNumber, confirmation} = props.route.params;
 
   const [loading, setLoading] = useState(false);
   const [code, setCode] = useState(undefined);
 
-  const phoneNumber = '+91 9408630920';
-
-  const handleVerify = async () => {};
+  const handleVerify = async () => {
+    console.log('clicked....');
+    try {
+      confirmation.confirm(code);
+    } catch (error) {
+      console.log('Invalid code.');
+    }
+  };
 
   return (
     <SafeAreaView style={BaseStyle.safearea}>
@@ -39,7 +44,7 @@ const VerifyOtp = props => {
           <View style={styles.container}>
             <View style={BaseStyle.container}>
               <Text type="normalText" style={styles.subText}>
-                {`Enter code sent to your number ${phoneNumber}`}
+                {`Enter code sent to your number +${phoneNumber}`}
               </Text>
 
               <View style={{flexDirection: 'row'}}>
@@ -49,7 +54,7 @@ const VerifyOtp = props => {
                     justifyContent: 'space-between',
                     height: 100,
                   }}
-                  pinCount={4}
+                  pinCount={6}
                   code={code}
                   onCodeChanged={code => {
                     setCode(code);
@@ -62,7 +67,7 @@ const VerifyOtp = props => {
                         ? 'rgba(50, 120, 242, 0.1)'
                         : '#F5F5F5',
                       color: '#42403D',
-                      fontSize: 26,
+                      fontSize: 16,
                     },
                   ]}
                   keyboardType="number-pad"
@@ -77,12 +82,12 @@ const VerifyOtp = props => {
               </Text>
 
               <TouchableOpacity
-                disabled={!(code?.length === 4)}
+                disabled={!(code?.length === 6)}
                 onPress={() => handleVerify()}
                 style={[
                   styles.primaryButton,
                   {
-                    backgroundColor: !(code?.length === 4)
+                    backgroundColor: !(code?.length === 6)
                       ? '#B9B9B9'
                       : '#3278F2',
                   },

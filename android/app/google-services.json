@@ -7,9 +7,9 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:480318082969:android:abc252bb7cbce593a48d08",
+        "mobilesdk_app_id": "1:480318082969:android:d0014eff7bdef224a48d08",
         "android_client_info": {
-          "package_name": "com.mytripapp"
+          "package_name": "com.mytrip"
         }
       },
       "oauth_client": [
@@ -29,6 +29,13 @@
             {
               "client_id": "480318082969-p1m22v124efi9ir28n9fp2epp242pp8u.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "480318082969-n1bjg203rerkp67gsfrhfhabr8q49nht.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.mytrip"
+              }
             }
           ]
         }

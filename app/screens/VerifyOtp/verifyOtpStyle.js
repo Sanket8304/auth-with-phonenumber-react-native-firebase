@@ -11,7 +11,7 @@ export default styles = StyleSheet.create({
     fontSize: 17,
   },
   codeInputFieldStyle: {
-    width: 64,
+    width: 54,
     height: 56,
     borderWidth: 0,
     borderRadius: 15,

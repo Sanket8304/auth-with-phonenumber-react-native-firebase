@@ -10,6 +10,7 @@ import {
   Text,
 } from 'react-native';
 import CountryPicker from 'react-native-country-picker-modal';
+import auth from '@react-native-firebase/auth';
 
 //component imports
 
@@ -42,7 +43,18 @@ const Login = props => {
     }
   };
 
-  const handleSubmit = async () => {};
+  const handleSubmit = async () => {
+    const number = '+' + callingCode + ' ' + phoneNumber;
+    console.log('number ->', number);
+    const confirmation = await auth().signInWithPhoneNumber(number);
+    console.log('confirmation ->', JSON.stringify(confirmation));
+    // if (confirmation) {
+    //   props.navigation.navigate('VerifyOtp', {
+    //     phoneNumber: callingCode + ' ' + phoneNumber,
+    //     confirmation: confirmation,
+    //   });
+    // }
+  };
 
   return loading ? (
     <View style={{flex: 1, backgroundColor: '#FFFFFF'}}>

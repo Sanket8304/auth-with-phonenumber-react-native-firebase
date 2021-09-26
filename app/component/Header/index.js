@@ -15,8 +15,7 @@ const NNHeader = props => {
       <View style={{flex: 1, flexDirection: 'row', borderRadius: 15}}>
         <TouchableOpacity
           style={styles.backButton}
-          //   onPress={() => navigation.goBack()}
-        >
+          onPress={() => navigation.goBack()}>
           <Image
             source={images.backArrow}
             style={styles.backArrow}
