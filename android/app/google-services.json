@@ -22,6 +22,14 @@
           }
         },
         {
+          "client_id": "480318082969-ma8no4ohaa333ue30ak2fjpmp2bnr1e6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mytrip",
+            "certificate_hash": "2cd9396398f532cd513595b5596727c4f94d1827"
+          }
+        },
+        {
           "client_id": "480318082969-p1m22v124efi9ir28n9fp2epp242pp8u.apps.googleusercontent.com",
           "client_type": 3
         }

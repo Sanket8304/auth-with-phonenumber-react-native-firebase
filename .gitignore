@@ -1,6 +1,7 @@
 node_modules/
 package-lock.json
 android/app/release
+android/java_pid39034.hprof
 npm-debug.*
 *.jks
 *.p8
