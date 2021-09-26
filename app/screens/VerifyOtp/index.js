@@ -29,17 +29,15 @@ const VerifyOtp = props => {
   const [confirm, setConfirm] = useState(confirmation);
 
   const handleResendOTP = async () => {
-    setLoading(true);
     const number = '+' + phoneNumber.replace(' ', '');
 
     try {
       const res = await auth().signInWithPhoneNumber(number);
       if (res) {
         setConfirm(res);
-        setLoading(false);
       }
     } catch (error) {
-      setLoading(false);
+      console.log('error ->', error);
       alert(error);
     }
   };

@@ -26,6 +26,7 @@ const NavigationStack = props => {
           name="Home"
           component={Home}
           options={{
+            headerShown: false,
             tabBarLabel: 'Home',
             tabBarIcon: ({focused}) => {
               return (
@@ -45,6 +46,7 @@ const NavigationStack = props => {
           name="MyTrip"
           component={MyTrip}
           options={{
+            headerShown: false,
             tabBarLabel: 'MyTrip',
             tabBarIcon: ({focused}) => {
               return (
@@ -64,6 +66,7 @@ const NavigationStack = props => {
           name="Offers"
           component={Offers}
           options={{
+            headerShown: false,
             tabBarLabel: 'Offers',
             tabBarIcon: ({focused}) => {
               return (
@@ -83,6 +86,7 @@ const NavigationStack = props => {
           name="TripIdea"
           component={TripIdea}
           options={{
+            headerShown: false,
             tabBarLabel: 'TripIdea',
             tabBarIcon: ({focused}) => {
               return (
@@ -102,6 +106,7 @@ const NavigationStack = props => {
           name="TripMony"
           component={TripMony}
           options={{
+            headerShown: false,
             tabBarLabel: 'TripMony',
             tabBarIcon: ({focused}) => {
               return (
