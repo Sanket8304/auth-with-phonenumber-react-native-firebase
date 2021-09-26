@@ -26,9 +26,9 @@ const App = () => {
   return (
     <SafeAreaView style={backgroundStyle}>
       <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-      {/* <Login /> */}
+      <Login />
       {/* <VerifyOtp /> */}
-      <Home />
+      {/* <Home /> */}
     </SafeAreaView>
   );
 };

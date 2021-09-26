@@ -8,6 +8,12 @@ export default styles = StyleSheet.create({
     justifyContent: 'center',
     overflow: 'visible',
   },
+  text: {
+    fontSize: 26,
+    color: '#42403D',
+    fontWeight: '700',
+    paddingBottom: 15,
+  },
   inputBox: {
     marginBottom: 15,
   },

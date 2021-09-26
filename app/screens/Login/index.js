@@ -54,6 +54,7 @@ const Login = props => {
         behavior={Platform.OS == 'ios' ? 'padding' : ''}
         style={{flex: 1}}>
         <View style={styles.container}>
+          <Text style={styles.text}>Login</Text>
           <View style={{marginBottom: 15}}>
             <View style={styles.inputContainer}>
               <TouchableOpacity

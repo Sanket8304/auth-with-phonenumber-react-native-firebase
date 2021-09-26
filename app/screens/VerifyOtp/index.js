@@ -62,7 +62,6 @@ const VerifyOtp = props => {
                         ? 'rgba(50, 120, 242, 0.1)'
                         : '#F5F5F5',
                       color: '#42403D',
-                      fontFamily: 'CircularStd-Bold',
                       fontSize: 26,
                     },
                   ]}
