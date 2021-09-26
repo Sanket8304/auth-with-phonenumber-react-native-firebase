@@ -19,7 +19,7 @@ import styles from './appNavigationStyle';
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
 const NavigationStack = () => {
-  const auth = false;
+  const auth = true;
   const TabBar = () => {
     return (
       <Tab.Navigator>
@@ -27,20 +27,18 @@ const NavigationStack = () => {
           name="Home"
           component={Home}
           options={{
-            tabBarLabel: '',
+            tabBarLabel: 'Home',
             tabBarIcon: ({focused}) => {
-              if (focused) {
-                return (
-                  <View style={{alignItems: 'center'}}>
-                    <Image
-                      source={images.home}
-                      style={styles.icon}
-                      resizeMode="contain"
-                    />
-                    <View style={styles.activeDot} />
-                  </View>
-                );
-              }
+              return (
+                <View style={{alignItems: 'center'}}>
+                  <Image
+                    source={images.home}
+                    style={styles.icon}
+                    resizeMode="contain"
+                  />
+                  <View style={styles.activeDot} />
+                </View>
+              );
             },
           }}
         />
@@ -48,28 +46,18 @@ const NavigationStack = () => {
           name="MyTrip"
           component={MyTrip}
           options={{
-            tabBarLabel: '',
+            tabBarLabel: 'MyTrip',
             tabBarIcon: ({focused}) => {
-              if (focused) {
-                return (
-                  <View style={{alignItems: 'center'}}>
-                    <Image
-                      source={images.suitcase}
-                      style={styles.icon}
-                      resizeMode="contain"
-                    />
-                    <View style={styles.activeDot} />
-                  </View>
-                );
-              } else {
-                return (
+              return (
+                <View style={{alignItems: 'center'}}>
                   <Image
                     source={images.suitcase}
                     style={styles.icon}
                     resizeMode="contain"
                   />
-                );
-              }
+                  <View style={styles.activeDot} />
+                </View>
+              );
             },
           }}
         />
@@ -77,57 +65,37 @@ const NavigationStack = () => {
           name="Offers"
           component={Offers}
           options={{
-            tabBarLabel: '',
+            tabBarLabel: 'Offers',
             tabBarIcon: ({focused}) => {
-              if (focused) {
-                return (
-                  <View style={{alignItems: 'center'}}>
-                    <Image
-                      source={images.discount}
-                      style={styles.icon}
-                      resizeMode="contain"
-                    />
-                    <View style={styles.activeDot} />
-                  </View>
-                );
-              } else {
-                return (
+              return (
+                <View style={{alignItems: 'center'}}>
                   <Image
                     source={images.discount}
                     style={styles.icon}
                     resizeMode="contain"
                   />
-                );
-              }
+                  <View style={styles.activeDot} />
+                </View>
+              );
             },
           }}
         />
         <Tab.Screen
-          name="Favourites"
+          name="TripIdea"
           component={TripIdea}
           options={{
-            tabBarLabel: '',
+            tabBarLabel: 'TripIdea',
             tabBarIcon: ({focused}) => {
-              if (focused) {
-                return (
-                  <View style={{alignItems: 'center'}}>
-                    <Image
-                      source={images.lamp}
-                      style={styles.icon}
-                      resizeMode="contain"
-                    />
-                    <View style={styles.activeDot} />
-                  </View>
-                );
-              } else {
-                return (
+              return (
+                <View style={{alignItems: 'center'}}>
                   <Image
                     source={images.lamp}
                     style={styles.icon}
                     resizeMode="contain"
                   />
-                );
-              }
+                  <View style={styles.activeDot} />
+                </View>
+              );
             },
           }}
         />
@@ -135,28 +103,18 @@ const NavigationStack = () => {
           name="TripMony"
           component={TripMony}
           options={{
-            tabBarLabel: '',
+            tabBarLabel: 'TripMony',
             tabBarIcon: ({focused}) => {
-              if (focused) {
-                return (
-                  <View style={{alignItems: 'center'}}>
-                    <Image
-                      source={images.snowed_mountains}
-                      style={styles.icon}
-                      resizeMode="contain"
-                    />
-                    <View style={styles.activeDot} />
-                  </View>
-                );
-              } else {
-                return (
+              return (
+                <View style={{alignItems: 'center'}}>
                   <Image
-                    source={imagesimages.snowed_mountains}
+                    source={images.snowed_mountains}
                     style={styles.icon}
                     resizeMode="contain"
                   />
-                );
-              }
+                  <View style={styles.activeDot} />
+                </View>
+              );
             },
           }}
         />
