@@ -7,15 +7,22 @@
  */
 
 import React from 'react';
-import {SafeAreaView, StatusBar, useColorScheme} from 'react-native';
+import {Provider} from 'react-redux';
+import {PersistGate} from 'redux-persist/lib/integration/react';
 
-import Login from './app/screens/Login';
-import VerifyOtp from './app/screens/VerifyOtp';
-import Home from './app/screens/Home';
 import AppNavigation from './app/navigation/AppNavigation';
+import configureStore from './configureStore';
+
+const {store, persistor} = configureStore();
 
 const App = () => {
-  return <AppNavigation />;
+  return (
+    <Provider store={store}>
+      <PersistGate loading={null} persistor={persistor}>
+        <AppNavigation />
+      </PersistGate>
+    </Provider>
+  );
 };
 
 export default App;

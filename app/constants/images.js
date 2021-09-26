@@ -6,4 +6,5 @@ export default {
   lamp: require('../../assets/images/lamp.png'),
   snowed_mountains: require('../../assets/images/snowed_mountains.png'),
   suitcase: require('../../assets/images/suitcase.png'),
+  logout: require('../../assets/images/logout.png'),
 };

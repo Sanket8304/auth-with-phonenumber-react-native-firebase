@@ -18,8 +18,7 @@ import styles from './appNavigationStyle';
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
-const NavigationStack = () => {
-  const auth = true;
+const NavigationStack = props => {
   const TabBar = () => {
     return (
       <Tab.Navigator>
@@ -125,7 +124,7 @@ const NavigationStack = () => {
   return (
     <SafeAreaProvider>
       <NavigationContainer>
-        {auth ? (
+        {props.auth ? (
           <Stack.Navigator screenOptions={{headerShown: false}}>
             <Stack.Screen name="Home" component={TabBar} />
           </Stack.Navigator>
@@ -140,4 +139,8 @@ const NavigationStack = () => {
   );
 };
 
-export default NavigationStack;
+const mapStateToProps = state => ({
+  auth: state.login.auth,
+});
+
+export default connect(mapStateToProps)(NavigationStack);

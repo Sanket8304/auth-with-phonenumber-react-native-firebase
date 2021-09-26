@@ -9,13 +9,16 @@ import {
   TouchableOpacity,
 } from 'react-native';
 import OTPInputView from '@twotalltotems/react-native-otp-input';
+import {connect} from 'react-redux';
+import {bindActionCreators} from 'redux';
 
 //component imports
 import styles from './verifyOtpStyle';
 import BaseStyle from '../../styles/BaseStyle';
 import Spinner from '../../component/Spinner';
 import Header from '../../component/Header';
-//#6A6969
+import {setAuth} from '../../actions/loginAction';
+
 const VerifyOtp = props => {
   const {navigation} = props;
   const {phoneNumber, confirmation} = props.route.params;
@@ -24,13 +27,15 @@ const VerifyOtp = props => {
   const [code, setCode] = useState(undefined);
 
   const handleVerify = async () => {
-    console.log('clicked....');
+    setLoading(true);
     try {
       let res = await confirmation.confirm(code);
       if (res?.user) {
-        props.navigation.navigate('Home');
+        props.setAuth(res?.user);
+        setLoading(false);
       }
     } catch (error) {
+      setLoading(false);
       console.log('error ->', error);
       alert('Invalid code.');
     }
@@ -108,4 +113,14 @@ const VerifyOtp = props => {
   );
 };
 
-export default VerifyOtp;
+const mapStateToProps = state => ({
+  auth: state.login.auth,
+});
+
+function mapDispatchToProps(dispatch) {
+  return {
+    ...bindActionCreators({setAuth}, dispatch),
+  };
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(VerifyOtp);

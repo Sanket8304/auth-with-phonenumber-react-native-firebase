@@ -8,6 +8,16 @@ export default styles = StyleSheet.create({
     paddingHorizontal: 16,
     paddingBottom: 10,
   },
+  logoutButton: {
+    flex: 1,
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  logout: {
+    height: 24,
+    width: 20,
+    marginRight: 10,
+  },
   backButton: {
     paddingRight: 15,
     paddingVertical: 15,

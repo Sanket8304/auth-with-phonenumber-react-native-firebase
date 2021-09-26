@@ -44,6 +44,7 @@ const Login = props => {
   };
 
   const handleSubmit = async () => {
+    setLoading(true);
     const number = '+' + callingCode + ' ' + phoneNumber;
     try {
       const confirmation = await auth().signInWithPhoneNumber(number);
@@ -52,8 +53,10 @@ const Login = props => {
           phoneNumber: callingCode + ' ' + phoneNumber,
           confirmation: confirmation,
         });
+        setLoading(false);
       }
     } catch (error) {
+      setLoading(false);
       alert(error);
     }
   };
