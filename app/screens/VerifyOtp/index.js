@@ -31,7 +31,7 @@ const VerifyOtp = props => {
   const handleResendOTP = async () => {
     setLoading(true);
     const number = '+' + phoneNumber.replace(' ', '');
-    console.log('number ->', number);
+
     try {
       const res = await auth().signInWithPhoneNumber(number);
       if (res) {

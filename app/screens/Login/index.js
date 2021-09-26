@@ -24,6 +24,7 @@ const Login = props => {
   const [phoneNumber, setPhoneNumber] = useState(undefined);
   const [countryCode, setCountryCode] = useState('IN');
   const [callingCode, setCallingCode] = useState('91');
+  const [showCountryModal, setShowCountryModal] = useState(false);
 
   const withFilter = true;
   const withFlag = false;
@@ -86,6 +87,7 @@ const Login = props => {
                     withFilter,
                   }}
                   onClose={() => setShowCountryModal(false)}
+                  modalProps={{visible: showCountryModal}}
                   visible={openCountryModal}
                 />
                 <Image
