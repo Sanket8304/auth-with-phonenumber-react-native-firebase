@@ -12,6 +12,7 @@
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		1C6C3BD6E090E9E51482FAA9 /* libPods-MyTrip.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E30C50238E1055D070F08AF /* libPods-MyTrip.a */; };
+		39F594C727008D0B00CD36D7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 39F594C627008D0A00CD36D7 /* GoogleService-Info.plist */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		8308B1A8E08A474D15C29A3B /* libPods-MyTrip-MyTripTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 21F86918F3836067D47BD126 /* libPods-MyTrip-MyTripTests.a */; };
 /* End PBXBuildFile section */
@@ -38,6 +39,7 @@
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = MyTrip/main.m; sourceTree = "<group>"; };
 		21F86918F3836067D47BD126 /* libPods-MyTrip-MyTripTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MyTrip-MyTripTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		261DB635946EDE593851CDFB /* Pods-MyTrip.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyTrip.release.xcconfig"; path = "Target Support Files/Pods-MyTrip/Pods-MyTrip.release.xcconfig"; sourceTree = "<group>"; };
+		39F594C627008D0A00CD36D7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		44010811FDF868EFAB5354E3 /* Pods-MyTrip-MyTripTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyTrip-MyTripTests.release.xcconfig"; path = "Target Support Files/Pods-MyTrip-MyTripTests/Pods-MyTrip-MyTripTests.release.xcconfig"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = MyTrip/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8E30C50238E1055D070F08AF /* libPods-MyTrip.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MyTrip.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -116,6 +118,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				39F594C627008D0A00CD36D7 /* GoogleService-Info.plist */,
 				13B07FAE1A68108700A75B9A /* MyTrip */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* MyTripTests */,
@@ -245,6 +248,7 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				39F594C727008D0B00CD36D7 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
