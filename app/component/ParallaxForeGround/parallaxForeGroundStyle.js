@@ -2,7 +2,7 @@ import {StyleSheet} from 'react-native';
 
 export default styles = StyleSheet.create({
   container: {
-    padding: 15,
+    padding: 8,
   },
   fixedheaderView: {
     flexDirection: 'row',
@@ -84,7 +84,6 @@ export default styles = StyleSheet.create({
   tabContainer: {
     backgroundColor: 'rgb(255,255,255)',
     borderRadius: 10,
-    paddingVertical: 20,
     flexDirection: 'row',
     justifyContent: 'space-evenly',
     paddingHorizontal: 15,

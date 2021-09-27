@@ -12,6 +12,8 @@ import {setAuth} from '../../actions/loginAction';
 import styles from './homeStyles';
 import images from '../../constants/images';
 import ParallaxForeGround from '../../component/ParallaxForeGround';
+import ParallaxStickyHeader from '../../component/ParallaxStickyHeader';
+import ScrollView from '../../component/ScrollView';
 
 const Home = props => {
   const {navigation} = props;
@@ -28,29 +30,35 @@ const Home = props => {
   return (
     <SafeAreaView style={BaseStyle.safearea}>
       <ParallaxScrollView
-        style={{flex: 1, overflow: 'hidden', height: 250}}
+        style={{
+          flex: 1,
+          overflow: 'hidden',
+          height: 250,
+          shadowColor: 'rgba(0,0,0,0)',
+          shadowOffset: {
+            width: 0,
+            height: 10,
+          },
+          shadowOpacity: 0.5,
+          shadowRadius: 2,
+          elevation: 10,
+        }}
         renderBackground={() => (
           <Image
             source={images.travel}
             style={{
               width: window.width,
-              height: 250,
+              height: 270,
             }}
           />
         )}
-        renderStickyHeader={() => (
-          <View style={{height: 100}}>
-            <Image
-              source={images.search}
-              style={styles.searchIcon}
-              resizeMode="contain"
-            />
-          </View>
-        )}
+        fadeOutForeground={false}
         renderForeground={() => <ParallaxForeGround onPress={() => logout()} />}
-        parallaxHeaderHeight={350}>
-        <View style={{flex: 1, alignItems: 'center'}}>
-          <Text style={{fontSize: 30}}>Meow!</Text>
+        renderStickyHeader={() => <ParallaxStickyHeader />}
+        stickyHeaderHeight={75}
+        parallaxHeaderHeight={270}>
+        <View style={{flex: 1}}>
+          <ScrollView />
         </View>
       </ParallaxScrollView>
     </SafeAreaView>
