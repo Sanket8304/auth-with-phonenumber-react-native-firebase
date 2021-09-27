@@ -7,9 +7,7 @@ import styles from './cardItemStyle';
 import images from '../../constants/images';
 
 /*NNHeader component is commonly used to create HEading of all screen*/
-const ScrollView = props => {
-  const {onPress} = props;
-
+const CardItem = props => {
   return (
     <View style={styles.titleCard}>
       <View style={styles.cardItem}>
@@ -83,4 +81,4 @@ const ScrollView = props => {
   );
 };
 
-export default ScrollView;
+export default CardItem;
