@@ -29,6 +29,7 @@ const VerifyOtp = props => {
   const [confirm, setConfirm] = useState(confirmation);
 
   const handleResendOTP = async () => {
+    setCode(undefined);
     const number = '+' + phoneNumber.replace(' ', '');
 
     try {
