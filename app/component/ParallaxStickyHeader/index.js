@@ -11,10 +11,7 @@ const ParallaxStickyHeader = props => {
   const {onPress} = props;
 
   return (
-    <ImageBackground
-      source={images.travel}
-      resizeMode="contain"
-      style={styles.backGroundImage}>
+    <ImageBackground source={images.travel} style={styles.backGroundImage}>
       <View style={styles.tabContainer}>
         <View style={styles.tabSubContainer}>
           <View style={styles.roundView}>

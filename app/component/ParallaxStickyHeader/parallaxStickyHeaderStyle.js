@@ -9,7 +9,7 @@ export default styles = StyleSheet.create({
     backgroundColor: 'rgb(255,255,255)',
     borderRadius: 10,
     flexDirection: 'row',
-    marginHorizontal: 8,
+    marginHorizontal: 15,
     marginVertical: 10,
     justifyContent: 'space-evenly',
   },

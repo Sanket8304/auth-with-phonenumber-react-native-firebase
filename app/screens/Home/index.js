@@ -34,14 +34,6 @@ const Home = props => {
           flex: 1,
           overflow: 'hidden',
           height: 250,
-          shadowColor: 'rgba(0,0,0,0)',
-          shadowOffset: {
-            width: 0,
-            height: 10,
-          },
-          shadowOpacity: 0.5,
-          shadowRadius: 2,
-          elevation: 10,
         }}
         renderBackground={() => (
           <Image
@@ -52,7 +44,8 @@ const Home = props => {
             }}
           />
         )}
-        fadeOutForeground={false}
+        fadeOutForeground={true}
+        outputScaleValue={3}
         renderForeground={() => <ParallaxForeGround onPress={() => logout()} />}
         renderStickyHeader={() => <ParallaxStickyHeader />}
         stickyHeaderHeight={75}

@@ -2,7 +2,7 @@ import {StyleSheet} from 'react-native';
 
 export default styles = StyleSheet.create({
   container: {
-    padding: 8,
+    padding: 15,
   },
   fixedheaderView: {
     flexDirection: 'row',
@@ -48,8 +48,8 @@ export default styles = StyleSheet.create({
     alignItems: 'center',
   },
   suitcase: {
-    height: 20,
-    width: 20,
+    height: 15,
+    width: 15,
   },
   rightArrowIcon: {
     height: 10,
@@ -58,7 +58,7 @@ export default styles = StyleSheet.create({
   headerSubContainer: {
     backgroundColor: 'rgba(255,255,255, 0.3)',
     borderWidth: 2,
-    borderColor: 'rgba(255,255,255, 0.3)',
+    borderColor: 'rgba(255,255,255, 0.4)',
     borderRadius: 10,
     padding: 10,
     flexDirection: 'row',
@@ -87,10 +87,13 @@ export default styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-evenly',
     paddingHorizontal: 15,
+    marginTop: 6,
   },
   tabSubContainer: {
     flex: 1,
     alignItems: 'center',
+    position: 'relative',
+    bottom: 13,
   },
   flightIcon: {
     height: 25,
@@ -100,11 +103,11 @@ export default styles = StyleSheet.create({
     borderRadius: 20,
     height: 35,
     width: 35,
-    backgroundColor: 'rgba(52, 83, 207, 0.1)',
+    backgroundColor: 'rgb(222, 247, 255)',
     justifyContent: 'center',
     alignItems: 'center',
     borderWidth: 2,
-    borderColor: 'rgba(255,255,255, 0.3)',
+    borderColor: 'rgb(247, 255, 253)',
   },
   tabText: {
     textAlign: 'center',

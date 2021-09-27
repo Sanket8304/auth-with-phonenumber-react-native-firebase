@@ -7,6 +7,7 @@ import styles from './scrollViewStyle';
 import images from '../../constants/images';
 import CardItem from '../CardItem';
 import HorozontalSlider from '../HorozontalSlider';
+import Offers from '../Offers';
 
 /*NNHeader component is commonly used to create HEading of all screen*/
 const ScrollView = props => {
@@ -16,6 +17,7 @@ const ScrollView = props => {
     <View style={styles.container}>
       <CardItem />
       <HorozontalSlider />
+      <Offers />
     </View>
   );
 };

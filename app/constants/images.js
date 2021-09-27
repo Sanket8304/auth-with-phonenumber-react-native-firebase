@@ -33,4 +33,6 @@ export default {
   wallet: require('../../assets/images/wallet.png'),
   right_arrow: require('../../assets/images/right_arrow.png'),
   vertical_dots: require('../../assets/images/vertical_dots.png'),
+  right_arrow_purpule: require('../../assets/images/right_arrow_purpule.png'),
+  right_arrow_blue: require('../../assets/images/right_arrow_blue.png'),
 };

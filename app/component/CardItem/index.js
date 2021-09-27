@@ -13,7 +13,7 @@ const ScrollView = props => {
   return (
     <View style={styles.titleCard}>
       <View style={styles.cardItem}>
-        <View style={[styles.itemView, {paddingBottom: 30}]}>
+        <View style={styles.itemView}>
           <Image source={images.car} style={styles.icon} resizeMode="contain" />
           <Text style={styles.text}>Airport Cabs</Text>
         </View>
@@ -28,7 +28,7 @@ const ScrollView = props => {
       </View>
 
       <View style={styles.cardItem}>
-        <View style={[styles.itemView, {paddingBottom: 30}]}>
+        <View style={styles.itemView}>
           <Image
             source={images.modern_house}
             style={styles.icon}
@@ -47,7 +47,7 @@ const ScrollView = props => {
       </View>
 
       <View style={styles.cardItem}>
-        <View style={[styles.itemView, {paddingBottom: 30}]}>
+        <View style={[styles.itemView, {paddingBottom: 10}]}>
           <Image
             source={images.car_orange}
             style={styles.icon}
@@ -66,7 +66,7 @@ const ScrollView = props => {
       </View>
 
       <View style={[styles.cardItem, {borderRightWidth: 0, marginRight: 0}]}>
-        <View style={[styles.itemView, {paddingBottom: 30}]}>
+        <View style={[styles.itemView, {paddingBottom: 10}]}>
           <Image source={images.run} style={styles.icon} resizeMode="contain" />
           <Text style={styles.text}>Activities & Tours</Text>
         </View>

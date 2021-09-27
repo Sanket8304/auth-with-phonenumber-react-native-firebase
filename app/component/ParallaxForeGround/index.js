@@ -28,17 +28,20 @@ const ParallaxForeGround = props => {
             <Text style={styles.myText}>my</Text>
           </View>
         </View>
+
         <View style={styles.subcontainer}>
           <Image
             source={images.search}
             style={styles.searchIcon}
             resizeMode="contain"
           />
+
           <Image
             source={images.wallet}
             style={styles.walletIcon}
             resizeMode="contain"
           />
+
           <View style={styles.view}>
             <Image
               source={images.suitcase_red}
@@ -54,6 +57,7 @@ const ParallaxForeGround = props => {
           </View>
         </View>
       </View>
+
       <View style={styles.headerSubContainer}>
         <View style={{flex: 1}}>
           <Text style={styles.text}>Good Afternoon, Sanket</Text>
@@ -62,17 +66,20 @@ const ParallaxForeGround = props => {
             services for you
           </Text>
         </View>
+
         <Image
           source={images.right_arrow}
           style={styles.rightArrowIcon1}
           resizeMode="contain"
         />
+
         <Image
           source={images.vertical_dots}
           style={styles.verticalDots}
           resizeMode="contain"
         />
       </View>
+
       <View style={styles.tabContainer}>
         <View style={styles.tabSubContainer}>
           <View style={styles.roundView}>
@@ -84,12 +91,10 @@ const ParallaxForeGround = props => {
           </View>
           <Text style={styles.tabText}>Flights</Text>
         </View>
+
         <View style={styles.tabSubContainer}>
           <View
-            style={[
-              styles.roundView,
-              {backgroundColor: 'rgba(141, 68, 68, 0.5)'},
-            ]}>
+            style={[styles.roundView, {backgroundColor: 'rgb(240, 177, 217)'}]}>
             <Image
               source={images.hotel}
               style={styles.flightIcon}
@@ -98,12 +103,10 @@ const ParallaxForeGround = props => {
           </View>
           <Text style={styles.tabText}>Hotels</Text>
         </View>
+
         <View style={styles.tabSubContainer}>
           <View
-            style={[
-              styles.roundView,
-              {backgroundColor: 'rgba(247, 180, 22, 0.1)'},
-            ]}>
+            style={[styles.roundView, {backgroundColor: 'rgb(252, 229, 182)'}]}>
             <Image
               source={images.car_orange}
               style={styles.flightIcon}
@@ -112,12 +115,10 @@ const ParallaxForeGround = props => {
           </View>
           <Text style={styles.tabText}>Trains & Bus</Text>
         </View>
+
         <View style={styles.tabSubContainer}>
           <View
-            style={[
-              styles.roundView,
-              {backgroundColor: 'rgba(45, 173, 83, 0.2)'},
-            ]}>
+            style={[styles.roundView, {backgroundColor: 'rgb(217, 255, 243)'}]}>
             <Image
               source={images.holidays}
               style={styles.flightIcon}
