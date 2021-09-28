@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, ScrollView, FlatList, Text, Image} from 'react-native';
+import {View, FlatList, Text, Image} from 'react-native';
 
 import styles from './textSliderStyle';
 import images from '../../constants/images';
@@ -36,7 +36,7 @@ const HorozontalSlider = () => {
   return (
     <FlatList
       horizontal={true}
-      keyExtractor={item => item.name}
+      key={item => item.name}
       showsVerticalScrollIndicator={false}
       showsHorizontalScrollIndicator={false}
       data={items}

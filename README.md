@@ -4,28 +4,28 @@
 
 #### Dependancies
 
-|Name|Version|
-|---|---|
-|"@react-native-async-storage/async-storage"| "~1.15.0"|
-|"@react-native-firebase/app"|"^12.8.0"|
-|"@react-native-firebase/auth"|"^12.3.0"|
-|"@react-native-masked-view/masked-view"|"^0.2.6"|
-|"@react-navigation/bottom-tabs"|"^6.0.5"|
-|"@react-navigation/native"|"^6.0.2"|
-|"@react-navigation/native-stack"|"^6.1.0"|
-|"@twotalltotems/react-native-otp-input"|"1.3.7"|
-|"react"|"17.0.2"|
-|"react-native"|"0.65.1"|
-|"react-native-root-siblings"|"^4.1.1"|
-|"react-native-country-picker-modal"|"^2.0.0"|
-|"react-native-gesture-handler"|"^1.10.3"|
-|"react-native-safe-area-context"|"^3.3.2"|
-|"react-native-screens"|"^3.7.2"|
-|"react-native-webview"|"^11.6.5"|
-|"react-redux"|"^7.2.5"|
-|"redux"|"^4.1.0"|
-|"redux-persist"|"^6.0.0"|
-|"redux-thunk"|"^2.3.0"|
+| Name                                        | Version   |
+| ------------------------------------------- | --------- |
+| "@react-native-async-storage/async-storage" | "~1.15.0" |
+| "@react-native-firebase/app"                | "^12.8.0" |
+| "@react-native-firebase/auth"               | "^12.3.0" |
+| "@react-native-masked-view/masked-view"     | "^0.2.6"  |
+| "@react-navigation/bottom-tabs"             | "^6.0.5"  |
+| "@react-navigation/native"                  | "^6.0.2"  |
+| "@react-navigation/native-stack"            | "^6.1.0"  |
+| "@twotalltotems/react-native-otp-input"     | "1.3.7"   |
+| "react"                                     | "17.0.2"  |
+| "react-native"                              | "0.65.1"  |
+| "react-native-root-siblings"                | "^4.1.1"  |
+| "react-native-country-picker-modal"         | "^2.0.0"  |
+| "react-native-gesture-handler"              | "^1.10.3" |
+| "react-native-safe-area-context"            | "^3.3.2"  |
+| "react-native-screens"                      | "^3.7.2"  |
+| "react-native-parallax-scroll-view"         | "^0.21.3" |
+| "react-redux"                               | "^7.2.5"  |
+| "redux"                                     | "^4.1.0"  |
+| "redux-persist"                             | "^6.0.0"  |
+| "redux-thunk"                               | "^2.3.0"  |
 
 #### Installing and Running the Project
 

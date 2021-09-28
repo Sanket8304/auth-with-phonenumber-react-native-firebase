@@ -44,10 +44,11 @@ export default styles = StyleSheet.create({
   },
   imageViewContainer: {
     flexDirection: 'row',
-    marginTop: 10,
+    marginTop: 5,
   },
   textView: {
     flex: 1,
+    width: 300,
     flexDirection: 'row',
     alignItems: 'center',
     backgroundColor: 'rgb(255,255,255)',
@@ -69,11 +70,14 @@ export default styles = StyleSheet.create({
     justifyContent: 'space-between',
     padding: 12,
     position: 'relative',
-    right: 30,
+    right: 40,
   },
   image: {
     height: 45,
     width: 45,
+    marginRight: 10,
+    backgroundColor: 'red',
+    borderRadius: 5,
   },
   tripMoneyText: {
     color: '#327245',

@@ -7,7 +7,7 @@ export default {
   snowed_mountains: require('../../assets/images/snowed_mountains.png'),
   suitcase: require('../../assets/images/suitcase.png'),
   logout: require('../../assets/images/logout.png'),
-  travel: require('../../assets/images/travel.png'),
+  travel: require('../../assets/images/travel.jpg'),
   search: require('../../assets/images/search.png'),
   car_orange: require('../../assets/images/car_orange.png'),
   car: require('../../assets/images/car.png'),

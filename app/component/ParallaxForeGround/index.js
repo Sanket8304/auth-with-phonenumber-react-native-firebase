@@ -1,28 +1,22 @@
 //library imports
 import React from 'react';
-import {View, Image, TouchableOpacity, Text} from 'react-native';
+import {View, Image, Text} from 'react-native';
 
 //component imports
 import styles from './parallaxForeGroundStyle';
 import images from '../../constants/images';
 
 /*NNHeader component is commonly used to create HEading of all screen*/
-const ParallaxForeGround = props => {
-  const {onPress} = props;
-
+const ParallaxForeGround = () => {
   return (
     <View style={styles.container}>
       <View style={styles.fixedheaderView}>
         <View style={styles.subcontainer}>
-          <TouchableOpacity
-          // onPress={() => onPress()}
-          >
-            <Image
-              source={images.menu}
-              style={styles.menuIcon}
-              resizeMode="contain"
-            />
-          </TouchableOpacity>
+          <Image
+            source={images.menu}
+            style={styles.menuIcon}
+            resizeMode="contain"
+          />
 
           <View style={styles.square}>
             <Text style={styles.myText}>my</Text>

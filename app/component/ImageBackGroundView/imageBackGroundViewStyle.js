@@ -10,7 +10,7 @@ export default styles = StyleSheet.create({
     width: window.width,
     borderRadius: 5,
     justifyContent: 'flex-end',
-    marginRight: 10,
+    marginRight: 5,
   },
   text: {
     color: 'rgb(255,255,255)',

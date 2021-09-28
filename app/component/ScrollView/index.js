@@ -12,8 +12,6 @@ import ImageBackGroundView from '../ImageBackGroundView';
 
 /*NNHeader component is commonly used to create HEading of all screen*/
 const ScrollView = props => {
-  const {onPress} = props;
-
   const items = [
     {
       image: images.travel,
@@ -38,7 +36,7 @@ const ScrollView = props => {
             resizeMode="contain"
           />
 
-          <View style={{flex: 1}}>
+          <View style={{paddingRight: 10, top: 5}}>
             <Text style={styles.text}>{item.name}</Text>
             <Text style={styles.subText}>{item.text}</Text>
           </View>
@@ -114,7 +112,7 @@ const ScrollView = props => {
         <Text style={styles.text}>Get 2-minute Digital Approval</Text>
         <FlatList
           horizontal={true}
-          keyExtractor={item => item.name}
+          key={item => item.name}
           showsVerticalScrollIndicator={false}
           showsHorizontalScrollIndicator={false}
           data={items}

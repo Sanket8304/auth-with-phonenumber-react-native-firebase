@@ -100,7 +100,7 @@ const Offers = () => {
 
       <FlatList
         horizontal={true}
-        keyExtractor={item => item.name}
+        key={item => item.index}
         showsVerticalScrollIndicator={false}
         showsHorizontalScrollIndicator={false}
         data={imageItems}
